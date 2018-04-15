@@ -1,3 +1,6 @@
+# Config and Secret Keys
+core/config.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -150,6 +153,3 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
-
-# Config and Secret Keys
-core/config.py
