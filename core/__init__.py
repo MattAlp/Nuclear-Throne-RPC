@@ -1,2 +1,2 @@
 from core.session import Session
-from core.config import Config
+from core.config import *
