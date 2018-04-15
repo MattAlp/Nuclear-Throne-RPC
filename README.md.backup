@@ -1,7 +1,7 @@
 # Nuclear Throne RPC
 
 
-About this project
+About
 ======
 This Python script serves as an interface between the [Nuclear Throne Stream Key API](http://nuclearthrone.com/streamkey/) and the [Discord Rich Presence API](https://discordapp.com/rich-presence).
 
