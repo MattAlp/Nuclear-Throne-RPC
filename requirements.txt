@@ -1,0 +1,2 @@
+requests >= 2.8.3
+discoIPC >= 1.0.0
