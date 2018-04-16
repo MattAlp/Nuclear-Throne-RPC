@@ -33,7 +33,6 @@ class Session:
         self.kills = 0
         self.characterLevel = 1
 
-
     def update(self):
         try:
             info = requests.get(self.api_url, (("s", self.steam64ID), ("key", self.key))).json()
@@ -62,20 +61,47 @@ class Session:
                 self.skin = 0
                 self.kills = 0
                 self.characterLevel = 1
-        except Exception:
-            pass
+        except Exception as e:
+            print("[ERROR]: " + str(e))
+            print("[IMPORTANT]: Check if your stream key and steam ID are properly set in config.py")
 
-    def getWorldInfo(self):
-        return self.worlds[self.world] + ", Level " + str(self.level) + ", Loop " + str(self.loops)
+    def get_world_info(self):
+        return "%s %i, Loop %i, %s Run" %(self.worlds[self.world], self.level, self.loops, self.gameType.capitalize())
 
-    def getCharacter(self):
+    def get_character(self):
         return self.characters[self.character]
 
-    def getCrown(self):
+    def get_crown(self):
         return self.crowns[self.crown]
 
-    def isBSkin(self):
+    def is_b_skin(self):
         if self.skin == 0:
             return False
         else:
             return True
+
+    def generate_presence(self):
+        if self.character != 0:
+            # game_activity['state'] = self.get_world_info()
+            # game_activity['details'] = self.get_character()
+            # game_activity['assets'] = {'large_image': 'main', 'large_text': "HP: " + str(self.health)}
+            game_activity = {
+                'state': self.get_world_info(),
+                'details': 'HP: ' + str(self.health) + " / Kills: " + str(self.kills),
+                'timestamps': {
+                    'start': self.timestamp
+                },
+                'assets': {
+                    'large_image': 'main',
+                    'large_text': self.get_character()
+                }
+            }
+        else:
+            game_activity = {
+                'state': 'In Main Menu',
+                'assets': {
+                    'large_image': 'main',
+                    'large_text': 'Fläshyn!'
+                }
+            }
+        return game_activity
