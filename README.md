@@ -39,3 +39,5 @@ Final Notes
 This is my first project on Github, contributions and stars are greatly appreciated.
 
 Have a question? DM me at [/u/NotMattA](https://reddit.com/u/NotMattA) on reddit!
+
+Someone said they'd buy me coffee, so [here you go <3](https://paypal.me/MattAlp)
