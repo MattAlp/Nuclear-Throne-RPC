@@ -25,7 +25,7 @@ These values must then be configured within ```config.py```; to start the progra
 
 Upcoming Features
 ======
-###In no particular order:
+In no particular order:
 * Large tiles with B-Skin support (once I get around to resizing the game files and manually upload them to Discord)
 * Small tiles to represent the current crown
 * Comments and PEP8 consistency
