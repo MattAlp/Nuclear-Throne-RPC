@@ -90,7 +90,9 @@ class Session:
                 },
                 'assets': {
                     'large_image': ''.join(ch for ch in self.get_character() if ch.isalnum()).lower(),
-                    'large_text': self.get_character() + ', level ' + str(self.characterLevel)
+                    'large_text': self.get_character() + ', level ' + str(self.characterLevel),
+                    'small_image': self.get_crown().replace(" ", "_").lower(),
+                    'small_text': self.get_crown()
                 }
             }
             if self.is_b_skin():
