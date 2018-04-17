@@ -5,7 +5,7 @@ import requests
 class Session:
     """Represents a Nuclear Throne game session"""
 
-    characters = ("", "Fish", "Crystal", "Eyes", "Melting", "Plant", "Y.V.", "Steroids",
+    characters = ("", "Fish", "Chrystal", "Eyes", "Melting", "Plant", "Y.V.", "Steroids",
                   "Robot", "Chicken", "Rebel", "Horror", "Rogue", "Skeleton", "Frog")
 
     crowns = ("", "No Crown", "Crown of Death", "Crown of Life", "Crown of Haste", "Crown of Guns",
@@ -82,20 +82,24 @@ class Session:
 
     def generate_presence(self):
         if self.character != 0:
-            # game_activity['state'] = self.get_world_info()
-            # game_activity['details'] = self.get_character()
-            # game_activity['assets'] = {'large_image': 'main', 'large_text': "HP: " + str(self.health)}
             game_activity = {
                 'state': self.get_world_info(),
-                'details': 'HP: ' + str(self.health) + " / Kills: " + str(self.kills),
+                'details': 'HP: ' + str(self.health) + ' / Kills: ' + str(self.kills),
                 'timestamps': {
                     'start': self.timestamp
                 },
                 'assets': {
-                    'large_image': 'main',
-                    'large_text': self.get_character()
+                    'large_image': ''.join(ch for ch in self.get_character() if ch.isalnum()).lower(),
+                    'large_text': self.get_character() + ', level ' + str(self.characterLevel)
                 }
             }
+            if self.is_b_skin():
+                game_activity['assets']['large_image'] += '_b'
+                if self.world == 5:  # Frozen City for 3rd Rebel Skin
+                    game_activity['assets']['large_image'] += '_fc'
+            if self.character == 9 and self.health == 0:  # Headless Chicken skin before death
+                game_activity['assets']['large_image'] = 'chicken_x'
+
         else:
             game_activity = {
                 'state': 'In Main Menu',
