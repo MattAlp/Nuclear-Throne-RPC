@@ -9,7 +9,7 @@ How to use this
 ======
 A proper tutorial will be put out shortly; for the time being, either
 1. Clone this repository if you are a developer and wish to contribute 
-2. Go to the (releases)[https://github.com/MattAlp/Nuclear-Throne-RPC/releases/tag/v.10] tab and download the zip file
+2. Go to the [releases](https://github.com/MattAlp/Nuclear-Throne-RPC/releases/tag/v.10) tab and download the zip file
     * To set the appropriate Steam64ID and NT Stream Key, edit ```config.ini```
     * Afterwards, run ```NuclearThroneRPC.exe```
 
