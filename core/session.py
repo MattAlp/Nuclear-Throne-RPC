@@ -63,7 +63,7 @@ class Session:
                 self.characterLevel = 1
         except Exception as e:
             print("[ERROR]: " + str(e))
-            print("[IMPORTANT]: Check if your stream key and steam ID are properly set in config.py")
+            print("[IMPORTANT]: Check if your stream key and steam ID are properly set in config.ini")
 
     def get_world_info(self):
         return "%s %i, Loop %i, %s Run" %(self.worlds[self.world], self.level, self.loops, self.gameType.capitalize())
