@@ -7,7 +7,11 @@ This **_WORK IN PROGRESS_** Python script serves as an interface between the [Nu
 
 How to use this
 ======
-A tutorial and precompiled executable will be added shortly.
+A proper tutorial will be put out shortly; for the time being, either
+1. Clone this repository if you are a developer and wish to contribute 
+2. Go to the resources tab and download the zip file
+    * To set the appropriate Steam64ID and NT Stream Key, edit ```config.ini```
+    * Afterwards, run ```NuclearThroneRPC.exe```
 
 Final Notes
 ======
