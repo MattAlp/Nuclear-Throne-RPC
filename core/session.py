@@ -97,7 +97,7 @@ class Session:
             }
             if self.is_b_skin():
                 game_activity['assets']['large_image'] += '_b'
-                if self.world == 5:  # Frozen City for 3rd Rebel Skin
+                if self.world == 5 and self.character == 10:  # Frozen City for 3rd Rebel Skin
                     game_activity['assets']['large_image'] += '_fc'
             if self.character == 9 and self.health == 0:  # Headless Chicken skin before death
                 game_activity['assets']['large_image'] = 'chicken_x'
