@@ -1,13 +1,23 @@
 # Nuclear Throne RPC
 
+![](https://img.shields.io/github/downloads/MattAlp/Nuclear-Throne-RPC/total.svg "Total Downloads")
+
 
 About this project
 ======
 This **_WORK IN PROGRESS_** Python script serves as an interface between the [Nuclear Throne Stream Key API](http://nuclearthrone.com/streamkey/) and the [Discord Rich Presence API](https://discordapp.com/rich-presence).
 
+Essentially, it gives you a detailed Discord status with current run information in real-time, obtained from Vlambeer's servers, as shown below:
+
+![](https://i.imgur.com/71vTBTB.png Status)
+
+![](https://i.imgur.com/rIO48eM.png Overlay)
+
+![](https://i.imgur.com/omZvDWH.png In-Game)
+
 How to use this
 ======
-A proper tutorial will be put out shortly; for the time being, either
+
 1. Clone this repository if you are a developer and wish to contribute 
 2. Go to the [releases](https://github.com/MattAlp/Nuclear-Throne-RPC/releases/tag/v.10) tab and download the zip file
     * To set the appropriate Steam64ID and NT Stream Key, edit ```config.ini```
