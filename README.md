@@ -9,11 +9,11 @@ This **_WORK IN PROGRESS_** Python script serves as an interface between the [Nu
 
 Essentially, it gives you a detailed Discord status with current run information in real-time, obtained from Vlambeer's servers, as shown below:
 
-![](https://i.imgur.com/71vTBTB.png Status)
+![](https://i.imgur.com/71vTBTB.png)
 
-![](https://i.imgur.com/rIO48eM.png Overlay)
+![](https://i.imgur.com/rIO48eM.png)
 
-![](https://i.imgur.com/omZvDWH.png In-Game)
+![](https://i.imgur.com/omZvDWH.png)
 
 How to use this
 ======
